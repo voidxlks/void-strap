@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>void-strap vXLKS</title>
+
+<style>
+  body {
+    margin: 0;
+    background: radial-gradient(circle at center, #0a0000, #000000);
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .panel {
+    background: rgba(20, 0, 0, 0.6);
+    border: 1px solid #ff1a1a;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px #ff0000;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  h1 {
+    color: #ff3333;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #ff6666;
+    font-size: 14px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff1a1a;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff0000;
+    transition: 0.2s;
+  }
+
+  button:hover {
+    background: #ff4d4d;
+    box-shadow: 0 0 20px #ff0000;
+  }
+
+  /* Floating blob */
+  svg {
+    position: absolute;
+    width: 500px;
+    opacity: 0.4;
+    filter: blur(40px);
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- Background Blob -->
+<svg viewBox="0 0 500 500">
+  <path fill="#ff0000">
+    <animate attributeName="d" dur="8s" repeatCount="indefinite"
+      values="
+      M420,300Q380,360,320,400Q260,440,200,410Q140,380,100,330Q60,280,80,220Q100,160,150,120Q200,80,260,70Q320,60,370,100Q420,140,440,200Q460,260,420,300Z;
+
+      M440,280Q410,340,350,380Q290,420,220,430Q150,440,110,380Q70,320,60,250Q50,180,110,140Q170,100,230,90Q290,80,350,110Q410,140,440,200Q470,260,440,280Z;
+
+      M420,300Q380,360,320,400Q260,440,200,410Q140,380,100,330Q60,280,80,220Q100,160,150,120Q200,80,260,70Q320,60,370,100Q420,140,440,200Q460,260,420,300Z
+      ">
+    </animate>
+  </path>
+</svg>
+
+<div class="container">
+  <div class="panel">
+    <h1>void-strap vXLKS</h1>
+    <p>Powered by the void ⚫</p>
+    <button onclick="activate()">Activate</button>
+  </div>
+</div>
+
+<script>
+function activate() {
+  alert("void-strap activated ⚫🔥");
+}
+</script>
+
+</body>
+</html>
