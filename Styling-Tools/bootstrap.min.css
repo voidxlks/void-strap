@@ -1,0 +1,51 @@
+/* bootstrap.min.css (lightweight custom build) */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5;color:#212529;background:#fff}
+.container{width:90%;max-width:1140px;margin:auto}
+.row{display:flex;flex-wrap:wrap;margin:-10px}
+.col{flex:1;padding:10px}
+.col-6{flex:0 0 50%}
+.col-4{flex:0 0 33.333%}
+.col-3{flex:0 0 25%}
+
+/* Typography */
+h1,h2,h3,h4,h5{margin-bottom:10px;font-weight:600}
+p{margin-bottom:10px}
+
+/* Buttons */
+.btn{display:inline-block;padding:8px 16px;border-radius:6px;border:none;cursor:pointer;font-size:14px}
+.btn-primary{background:#0d6efd;color:#fff}
+.btn-primary:hover{background:#0b5ed7}
+.btn-secondary{background:#6c757d;color:#fff}
+.btn-secondary:hover{background:#5c636a}
+
+/* Cards */
+.card{background:#fff;border:1px solid #ddd;border-radius:8px;padding:15px;margin-bottom:15px}
+.card-title{font-size:18px;margin-bottom:8px}
+.card-text{font-size:14px;color:#555}
+
+/* Navbar */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:#0d6efd;color:#fff}
+.navbar a{color:#fff;text-decoration:none;margin-left:10px}
+
+/* Forms */
+.form-control{width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;margin-bottom:10px}
+.form-control:focus{border-color:#0d6efd;outline:none}
+
+/* Utilities */
+.text-center{text-align:center}
+.mt-2{margin-top:10px}
+.mt-3{margin-top:15px}
+.p-2{padding:10px}
+.p-3{padding:15px}
+.rounded{border-radius:8px}
+.shadow{box-shadow:0 2px 6px rgba(0,0,0,0.1)}
+
+/* Alerts */
+.alert{padding:10px;border-radius:6px;margin-bottom:10px}
+.alert-primary{background:#cfe2ff;color:#084298}
+.alert-success{background:#d1e7dd;color:#0f5132}
+.alert-danger{background:#f8d7da;color:#842029}
+
+/* Grid spacing fix */
+.row>*{padding:10px}
