@@ -1,0 +1,171 @@
+/* void-strap vD.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background: radial-gradient(circle at center, #030000, #000000 90%);
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Layout */
+.void-d-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* Dynamic Panel */
+.void-d-box {
+  position: relative;
+  background: rgba(8, 0, 0, 0.75);
+  border-radius: 22px;
+  padding: 32px;
+  width: 300px;
+  text-align: center;
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 0, 0, 0.25);
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.3),
+    0 0 60px rgba(255, 0, 0, 0.15),
+    inset 0 0 15px rgba(255, 0, 0, 0.15);
+
+  animation: voidDEntry 0.7s ease;
+}
+
+/* Dynamic Glow Layer */
+.void-d-box::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 24px;
+  background: linear-gradient(120deg, #ff0000, transparent, #ff0000);
+  filter: blur(10px);
+  opacity: 0.6;
+  z-index: -1;
+  animation: voidDFlow 4s linear infinite;
+}
+
+/* Title */
+.void-d-title {
+  font-size: 24px;
+  color: #ff1f1f;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* Text */
+.void-d-text {
+  font-size: 13px;
+  color: #ff5555;
+  margin-bottom: 16px;
+}
+
+/* Input */
+.void-d-input {
+  width: 100%;
+  padding: 9px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,0,0,0.4);
+  background: #0a0000;
+  color: white;
+  outline: none;
+  transition: 0.25s;
+}
+
+.void-d-input:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 12px rgba(255,0,0,0.7);
+}
+
+/* Button */
+.void-d-btn {
+  padding: 11px 20px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(45deg, #ff0000, #700000);
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 0 15px rgba(255,0,0,0.6);
+}
+
+.void-d-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 30px rgba(255,0,0,0.9);
+}
+
+/* Background Waves */
+.void-d-wave {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,0,0,0.08);
+  animation: wavePulse 6s infinite ease-in-out;
+}
+
+.void-d-wave:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.void-d-wave:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.void-d-wave:nth-child(3) {
+  animation-delay: 4s;
+}
+
+/* Floating Core Glow */
+.void-d-core {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,0,0,0.25), transparent);
+  filter: blur(100px);
+  animation: coreFloat 10s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes voidDEntry {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes voidDFlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes wavePulse {
+  0% { transform: scale(0.8); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.15; }
+  100% { transform: scale(0.8); opacity: 0.3; }
+}
+
+@keyframes coreFloat {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(50px, -40px); }
+  100% { transform: translate(0,0); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+  border-radius: 10px;
+}
